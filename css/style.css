@@ -1,0 +1,194 @@
+/*color hover btn and color footer*/
+/*color for span in info block*/
+nav ul a:hover {
+  color: #fff;
+  background-color: #496487;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+}
+
+.wrapper header {
+  text-align: center;
+  -webkit-box-shadow: 0px 2px 5px #949494;
+          box-shadow: 0px 2px 5px #949494;
+}
+
+.header-info {
+  background-image: url("../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-info img {
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.header-info h1 {
+  font-size: 32px;
+  line-height: 34px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.header-info p {
+  font-size: 20px;
+  margin-top: 10px;
+  color: rgba(255, 245, 0, 0.5);
+}
+.header-info a {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin-bottom: 18px;
+}
+.header-info a::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+}
+.header-info a:hover {
+  border: 1px solid #fff;
+}
+.header-info .icon-github::after {
+  background-image: url(../img/github.png);
+  background-position: 45% 45%;
+}
+.header-info .icon-github:hover::after {
+  background-image: url(../img/github-h.png);
+}
+.header-info .icon-email::after {
+  background-image: url("../img/email.png");
+  background-position: 40% 40%;
+}
+.header-info .icon-email:hover::after {
+  background-image: url(../img/email-hover.png);
+}
+.header-info .icon-skype::after {
+  background-image: url(../img/skype.png);
+  background-position: 40% 45%;
+}
+.header-info .icon-skype:hover::after {
+  background-image: url(../img/skype-hover.png);
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style-type: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border-top: 1px solid #949494;
+  border-bottom: 1px solid #949494;
+}
+nav ul li {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+nav ul a {
+  font-size: 16px;
+  line-height: 18px;
+  display: block;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 20px 18px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 auto;
+          flex: 0 auto;
+}
+
+article h3 {
+  font-size: 24px;
+  text-align: center;
+}
+article p {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.my-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.my-skills h2 {
+  font-size: 18px;
+}
+.my-skills .skill-bar {
+  position: relative;
+  width: 100%;
+  height: 7px;
+  border: 1px solid #496487;
+  border-radius: 10px;
+}
+.my-skills .skill-bar::after {
+  position: absolute;
+  content: "";
+  height: 5px;
+  background-color: #306bbc;
+}
+
+.skill .html::after {
+  width: 75%;
+}
+.skill .css::after {
+  width: 70%;
+}
+.skill .javascript::after {
+  width: 15%;
+}
+.skill .bootstrap::after {
+  width: 55%;
+}
+.skill .scss::after {
+  width: 65%;
+}
+.skill .photoshop::after {
+  width: 75%;
+}
+
+.quality {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+}
+.quality li {
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

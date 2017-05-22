@@ -1,0 +1,227 @@
+$bg-h: #496487; /*color hover btn and color footer*/
+$span: #949494; /*color for span in info block*/
+$fz-p: 18px;
+
+
+%hover {
+  color: #fff;
+  background-color: $bg-h;
+}
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+}
+
+.wrapper {
+    
+  header {
+    text-align: center;
+    box-shadow: 0px 2px 5px #949494;
+  }
+}
+
+.header-info {
+  background-image: url("../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+    
+  img {
+    border-radius: 50%;
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.5);
+  }
+    
+  h1 {
+    font-size: 32px;
+    line-height: 34px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+   
+  p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: rgba(255, 245, 0, 0.5);
+  }
+    
+  a {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-bottom: 18px;
+      
+    
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+    }
+    
+    
+    &:hover {
+      border: 1px solid #fff;
+    }
+    }
+    
+  .icon-github::after {
+    background-image: url(../img/github.png);
+    background-position: 45% 45%;
+  }
+  
+  .icon-github:hover::after {
+    background-image: url(../img/github-h.png);
+  }
+    
+  .icon-email::after {
+    background-image: url("../img/email.png");
+    background-position: 40% 40%;
+  }
+  
+  .icon-email:hover::after {
+    background-image: url(../img/email-hover.png);
+  }
+    
+  .icon-skype::after {
+    background-image: url(../img/skype.png);
+    background-position: 40% 45%;
+  }
+  
+  .icon-skype:hover::after {
+    background-image: url(../img/skype-hover.png);
+  }
+  
+}
+
+nav {
+  
+  
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style-type: none;
+    justify-content: space-between;
+    flex-grow: 0;
+    border-top: 1px solid #949494;
+    border-bottom: 1px solid #949494;
+     
+    
+    li {
+      flex-grow: 1;
+    }
+    
+    
+    a {
+      font-size: 16px;
+      line-height: 18px;
+      display: block;
+      text-decoration: none;
+      text-transform: capitalize;
+      padding: 20px 18px;
+      flex: 0 auto;
+      
+      
+      &:hover {
+        @extend %hover;
+      }
+    }
+  }
+}
+
+article {
+  
+  h3 {
+    font-size: $fz-p + 6;
+    text-align: center;
+  }
+  
+  p {
+    font-size: $fz-p;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+.my-skills {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: $fz-p;
+  }
+  
+  .skill-bar {
+    position: relative;
+    width: 100%;
+    height: 7px;
+    border: 1px solid $bg-h;
+    border-radius: 10px;
+    
+    
+    &::after {
+      position: absolute;
+      content: "";
+      height: 5px;
+      background-color: #306bbc;
+    }
+  }
+  
+}
+
+.skill {
+  
+  .html::after{
+    width: 75%;
+  }
+  
+  .css::after {
+    width: 70%;
+  }
+  
+  .javascript::after {
+    width: 15%;
+  }
+  
+  .bootstrap::after {
+    width: 55%;
+  }
+  
+  .scss::after {
+    width: 65%;
+  }
+  
+  .photoshop::after {
+    width: 75%;
+  }
+}
+
+.quality {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  
+  li {
+    font-size: $fz-p;
+    text-align: center;
+    padding: 5px;
+  }
+}
