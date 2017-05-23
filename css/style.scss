@@ -8,21 +8,41 @@ $fz-p: 18px;
   background-color: $bg-h;
 }
 
+%social {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
 
-
-
+%social-after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+}
 
 * {
   box-sizing: border-box;
 }
 
 body {
+  margin: 2px;
   color: #000;
   background-color: #fff;
 }
 
+a {
+  color: #000;
+}
+
 .wrapper {
-    
+  height: 100%;
+  
   header {
     text-align: center;
     box-shadow: 0px 2px 5px #949494;
@@ -35,6 +55,7 @@ body {
   background-size: cover;
     
   img {
+    margin-top: 30px;
     border-radius: 50%;
     box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.5);
   }
@@ -49,27 +70,16 @@ body {
   p {
     font-size: 20px;
     margin-top: 10px;
-    color: rgba(255, 245, 0, 0.5);
+    color: rgba(255, 245, 0, 0.81);
   }
     
   a {
-    display: inline-block;
     position: relative;
-    width: 30px;
-    height: 30px;
-    margin-right: 20px;
-    border: 1px solid #000;
-    border-radius: 50%;
     margin-bottom: 18px;
-      
+    @extend %social; 
     
     &::after {
-      position: absolute;
-      content: "";
-      display: block;
-      width: 30px;
-      height: 30px;
-      background-repeat: no-repeat;
+      @extend %social-after;
     }
     
     
@@ -108,7 +118,7 @@ body {
 }
 
 nav {
-  
+  background-color: #9bb7db;
   
   ul {
     display: flex;
@@ -119,12 +129,13 @@ nav {
     list-style-type: none;
     justify-content: space-between;
     flex-grow: 0;
-    border-top: 1px solid #949494;
-    border-bottom: 1px solid #949494;
+    border-top: 1px solid #496487;
+    border-bottom: 1px solid #496487;
      
     
     li {
       flex-grow: 1;
+      text-align: center;
     }
     
     
@@ -145,7 +156,7 @@ nav {
   }
 }
 
-article {
+.about-all {
   
   h3 {
     font-size: $fz-p + 6;
@@ -160,13 +171,12 @@ article {
 }
 
 .my-skills {
-  display: flex;
-  flex-direction: column;
-  max-width: 320px;
+  width: 320px;
   margin: 0 auto;
-
+  
   h2 {
     font-size: $fz-p;
+    color: rgb(255, 108, 0);
   }
   
   .skill-bar {
@@ -214,14 +224,356 @@ article {
   }
 }
 
+.lol {
+  margin: 0 auto 25px auto;
+}
+
 .quality {
   list-style-type: none;
   padding: 0;
-  margin: 0 auto;
+  
   
   li {
     font-size: $fz-p;
     text-align: center;
     padding: 5px;
   }
+}
+
+.social-about {
+  text-align: center;
+  margin-bottom: 15px;
+  margin: 15px auto 25px auto;
+  
+  a {
+    @extend %social;
+  
+    
+  &::after {
+    @extend %social-after;
+  }
+  
+    
+  &:hover {
+    border: 1px solid rgb(255, 108, 0);
+  }  
+  }
+  
+  .email::after {
+    background-image: url(../img/email.png);
+    background-position: 40% 40%;;
+  }
+  
+  .skype::after {
+    background-image: url("../img/skype.png");
+    background-position: 40% 45%;
+  }
+}
+
+.portfolio {
+  
+  .nav-works {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    
+    a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      
+      &:hover {
+        color: $bg-h;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+  div {
+    width: 320px;
+    position: relative;
+    
+    &:hover::before {
+      position: absolute;
+      content: "";
+      width: 320px;
+      height: 190px;
+      background-color: rgba(255, 255, 255, 0.39);
+    }
+    
+    &:hover a {
+      display: block;
+    }
+    
+    
+    a {
+      padding: 5px 10px;
+      background-color: #fff;
+      border-radius: 50px;
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 100px;
+      color: #000;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.contact-me {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  
+  form {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-around;
+    
+    input[type="submit"] {
+      text-transform: uppercase;
+      background-color: $bg-h;
+      color: #fff;
+      border-style: none;
+      cursor: pointer;
+      border-radius: 10px;
+      padding: 10px;
+      
+      &:hover {
+        background-color: #4f8ddd;
+      }
+    }
+    
+    input[type="text"],
+    input[type="email"] {
+      border-style: none;
+      border-bottom: 2px solid #949494;
+      
+      &:focus {
+       border-bottom: 2px solid #4f8ddd;
+      }
+    }
+    
+    input, textarea {
+      font-size: 14px;
+      margin-bottom: 15px;
+      outline-style: none;
+      padding: 5px;
+    }
+  }
+}
+
+
+.contact-info {
+    width: 350px;
+    margin: 0 auto 15px auto;
+    
+  h3 {
+    font-size: $fz-p + 6;
+  }
+  
+    ul {
+      font-size: 18px;
+      line-height: 22px;
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 40px;
+      
+      span, a {
+        text-decoration: none;
+        color: $span;
+      }
+    }
+    
+    .social {
+      text-align: center;
+      
+      a {
+        position: relative;
+        @extend %social;
+        
+        &::after {
+          @extend %social-after;
+        }
+        
+        &:hover {
+          border-color: #4f8ddd;
+        }
+      }
+  
+      .github::after {
+          background-image: url("../img/github.png");
+          background-position: 45% 45%;
+        }
+      
+      .email::after {
+        background-image: url("../img/email.png");
+        background-position: 40% 40%;
+      }
+      
+      .skype::after {
+        background-image: url("../img/skype.png");
+        background-position: 40% 45%;
+      }
+    }
+  }
+
+.topic-notes {
+  
+  
+  select {
+    width: 150px;
+    height: 25px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 25px;
+    outline-style: none;
+    border: 1px solid $bg-h;
+    cursor: pointer;
+  }
+  
+  .filter-result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-grow: 1;
+    
+    div {
+      max-width: 350px;
+      
+      margin-top: 15px;
+    }
+    
+    a {
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+      text-decoration: none;
+      
+      &:hover {
+        color: #4f8ddd;
+      }
+    }
+    
+    span {
+      color: $span;
+    }
+  }
+}
+
+
+
+
+
+
+footer {
+  
+  margin-top: 45px;
+  background-color: $bg-h;
+  color: #fff;
+  text-align: center;
+  
+  p {
+    margin: 0;
+    padding: 10px;
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+  
+  nav {
+    
+    a {
+      position: relative;
+    
+      &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 30px;
+      top: 20px;
+      left: 15px;
+      background-repeat: no-repeat;
+      } 
+    }
+  
+    .about-me::before {
+      background-image: url("../img/user-2.png");
+    }
+    
+    .my-portfolio::before {
+      background-image: url("../img/portfolio.png");
+    }
+    
+    .contact::before {
+      background-image: url("../img/contact.png");
+    }
+    
+    .notes::before {
+      background-image: url("../img/notes.png");
+    }
+    
+  }
+  
+  .about-all {
+    display: flex;
+    flex-wrap: wrap;
+    
+    p {
+      padding: 0 20px;
+    }
+    
+    h3 {
+      width: 100%;
+    }
+    
+    .social-about {
+      width: 100%;
+    }
+  }
+  
+  .topic .nav-works {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  }
+
+@media screen and (min-width: 920px) {
+  
+  .wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .header-info {
+    float: left;
+    min-width: 320px;
+    box-shadow: 2px 4px 7px #949494;
+  }
+  
+  .topic-notes {
+    display: flex;
+  }
+
+}
+
+
+.topic {
+  display: none;
 }
