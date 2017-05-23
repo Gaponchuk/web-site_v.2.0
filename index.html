@@ -19,7 +19,8 @@
         <a class="icon-email" href="#"></a>
         <a class="icon-skype" href="#"></a>
       </div>
-      <nav>
+    </header>
+    <nav>
         <ul>
           <li><a class="about-me" href="#">about me</a></li>
           <li><a class="my-portfolio" href="#">my portfolio</a></li>
@@ -27,8 +28,7 @@
           <li><a class="notes " href="#">notes</a></li>
         </ul>
       </nav>
-    </header>
-    <article id="about-me">
+    <article id="about-me" class="about-all">
       <h3>Hi!</h3>
       <p>
         My name is Yuri. I am a front-end web developer since 2016. I love my work for the opportunity to work and communicate with different people. Responsibly I approach the tasks. With great pleasure I take part in complex and interesting projects.
@@ -72,17 +72,21 @@
           </div>
         </div>
       </div>
+      <div class="lol">
       <h3>What i'm doing</h3>
-      <ul>
+      <ul class="quality">
         <li>Adaptive/Responsive</li>
         <li>Good load spped</li>
         <li>Validation code</li>
         <li>Cross-browser compatibility</li>
-        <a href="mailto:gaponchukyn@gmail.com">Email</a>
-        <a href="skype:?call">Skype</a>
       </ul>
+      </div>
+      <div class="social-about">
+        <a class="email" href="mailto:gaponchukyn@gmail.com"></a>
+        <a class="skype" href="skype:?call"></a>
+      </div>
     </article>
-    <article id="my-portfolio" class="topic">
+    <article id="my-portfolio" class="topic portfolio">
       <ul class="nav-works">
         <li><a href="#">All Works</a></li>
         <li><a href="#">Development</a></li>
@@ -91,71 +95,71 @@
       <div class="works">
         <div class="work1">
           <img src="img/work1.jpg" alt="renthouse">
-          <a href="#"></a>
+          <a href="#">renthouse.com</a>
         </div>
         <div class="work2">
           <img src="img/work2.jpg" alt="fittnes">
-          <a href="#"></a>
+          <a href="#">fittnes.com</a>
         </div>
         <div class="work3">
           <img src="img/work3.jpg" alt="sport cars">
-          <a href="#"></a>
+          <a href="#">sport-cars.uk</a>
         </div>
         <div class="work4">
           <img src="img/work4.jpg" alt="traveling">
-          <a href="#"></a>
+          <a href="#">traveling.ru</a>
         </div>
         <div class="work5">
           <img src="img/work5.jpg" alt="surfing">
-          <a href="#"></a>
+          <a href="#">surfing.ua</a>
         </div>
         <div class="work6">
           <img src="img/work6.jpg" alt="sturtup company">
-          <a href="#"></a>
+          <a href="#">sturtup.com</a>
         </div>
         <div class="work7">
           <img src="img/work7.jpg" alt="english school">
-          <a href="#"></a>
+          <a href="#">english-school.ru</a>
         </div>
         <div class="work8">
           <img src="img/work8.jpg" alt="music">
-          <a href="#"></a>
+          <a href="#">music-europe.com</a>
         </div>
       </div>
     </article>
-    <article id="contact" class="topic">
+    <article id="contact" class="topic contact-me">
       <form action="" method="">
-        <input type="text">
-        <input type="email">
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea name="" id="" cols="30" rows="10" placeholder="Your question"></textarea>
         <input type="submit" value="send message">
       </form>
       <div class="contact-info">
         <h3>Contact info</h3>
         <ul>
-          <li>Address:<span>Noviy Urengoy, Russian Federation</span></li>
-          <li>Phone:<a href="tel:+79220987596">+7 922 098-75-96</a></li>
-          <li>Email:<a href="mailto:gaponchukyn@gmail.com">gaponchukyn@gmail.com</a></li>
-          <li>Skype:<a href="skype:?call">gaponchykyn</a></li>
+          <li>Address:<span> Noviy Urengoy, Russian Federation</span></li>
+          <li>Phone:<a href="tel:+79220987596"> +7 922 098-75-96</a></li>
+          <li>Email:<a href="mailto:gaponchukyn@gmail.com"> gaponchukyn@gmail.com</a></li>
+          <li>Skype:<a href="skype:?call"> gaponchykyn</a></li>
         </ul>
         <div class="social">
-          <a href="#">Github</a>
-          <a href="#">Email</a>
-          <a href="#">Skype</a>
+          <a class="github" href="#"></a>
+          <a class="email" href="#"></a>
+          <a class="skype" href="#"></a>
         </div>  
       </div>
     </article>
-    <article id="notes" class="topic">
-      <select name="">Filter by tags
-        <option>Development</option>
-        <option>Design</option>
-        <option>Other</option>
+    <article id="notes" class="topic topic-notes" >
+      <select name="">
+        <option>development</option>
+        <option>design</option>
+        <option>other</option>
       </select>
       <div class="filter-result">
         <div class="1">
           <img src="img/note-1.jpg" alt="" width="140" height="112">
           <a href="#">Enforcing CSS Syntax Style (and More!)</a>
-          <span>Tag: html5, css3</span>
+          <span>Tag: development</span>
         </div>
         <div class="2">
           <img src="img/note-2.jpg" alt="" width="140" height="112">
@@ -178,5 +182,6 @@
       <p>Copyright &#169; 2017 All right reserved</p>
     </footer>
   </div>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
