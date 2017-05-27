@@ -15,20 +15,20 @@
         <img src="img/face.png" alt="" width="160" height="160">
         <h1>Gaponchuk<br>Yuriy</h1>
         <p>Web developer</p>
-        <a class="icon-github" href="#"></a>
-        <a class="icon-email" href="#"></a>
-        <a class="icon-skype" href="#"></a>
+        <a class="icon-github" href="https://github.com/Gaponchuk"></a>
+        <a class="icon-email" href="mailto:gaponchukyn@gmail.com"></a>
+        <a class="icon-skype" href="skype:?call"></a>
       </div>
     </header>
     <nav>
-        <ul>
-          <li><a class="about-me" href="#">about me</a></li>
-          <li><a class="my-portfolio" href="#">my portfolio</a></li>
-          <li><a class="contact" href="#">contact</a></li>
-          <li><a class="notes " href="#">notes</a></li>
+        <ul class="navigation-tab">
+          <li><a class="about-me topic_link" href="#" onclick="openTopic(event, 'about-me')" id="defaultOpen">about me</a></li>
+          <li><a class="my-portfolio topic_link" href="#" onclick="openTopic(event, 'my-portfolio')">my portfolio</a></li>
+          <li><a class="contact topic_link" href="#" onclick="openTopic(event, 'contact')">contact</a></li>
+          <li><a class="notes topic_link" href="#" onclick="openTopic(event, 'notes')">notes</a></li>
         </ul>
       </nav>
-    <article id="about-me" class="about-all">
+    <article id="about-me" class="topic about-all">
       <h3>Hi!</h3>
       <p>
         My name is Yuri. I am a front-end web developer since 2016. I love my work for the opportunity to work and communicate with different people. Responsibly I approach the tasks. With great pleasure I take part in complex and interesting projects.
@@ -129,7 +129,7 @@
     </article>
     <article id="contact" class="topic contact-me">
       <form action="" method="">
-        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Name" value=John>
         <input type="email" placeholder="Email">
         <textarea name="" id="" cols="30" rows="10" placeholder="Your question"></textarea>
         <input type="submit" value="send message">
@@ -143,9 +143,9 @@
           <li>Skype:<a href="skype:?call"> gaponchykyn</a></li>
         </ul>
         <div class="social">
-          <a class="github" href="#"></a>
-          <a class="email" href="#"></a>
-          <a class="skype" href="#"></a>
+          <a class="github" href="https://github.com/Gaponchuk"></a>
+          <a class="email" href="mailto:gaponchukyn@gmail.com"></a>
+          <a class="skype" href="skype:?call"></a>
         </div>  
       </div>
     </article>
@@ -182,6 +182,6 @@
       <p>Copyright &#169; 2017 All right reserved</p>
     </footer>
   </div>
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="show.js"></script>
 </body>
 </html>
